@@ -13,6 +13,11 @@ function startTimer() {
             }
         }, 1000);
     }
+    // Add to startTimer() function
+const progress = document.querySelector('.progress');
+const radius = progress.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
+progress.style.strokeDasharray = `${circumference} ${circumference}`;
 }
 
 function pauseTimer() {
