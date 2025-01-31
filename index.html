@@ -18,7 +18,7 @@
         <button id="long-break-btn">Long Break</button>
     </div>
 
-    <!-- Progress Circle -->
+    <!-- Timer Display -->
     <div class="progress-container">
         <svg class="progress-circle">
             <circle class="background"></circle>
@@ -34,10 +34,15 @@
         <button onclick="resetTimer()">Reset</button>
     </div>
 
-    <!-- Completed Sessions -->
-    <footer>
-        <div id="sessions">Completed Sessions: 0</div>
-    </footer>
+    <!-- Task List -->
+    <section class="task-list">
+        <h2>Tasks</h2>
+        <ul id="tasks"></ul>
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button onclick="addTask()">+ Add Task</button>
+        </div>
+    </section>
 
     <!-- Alarm Sound -->
     <audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
