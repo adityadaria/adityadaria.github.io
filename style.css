@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #FF6F61, #FFAB40);
+    background: #001f3f; /* Navy blue background */
     color: white;
     margin: 0;
 }
@@ -27,14 +27,14 @@ h1 {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background-color: #FFAB40;
+    background-color: #003366; /* Darker navy blue */
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .timer-modes button.active-mode {
-    background-color: #FF6F61;
+    background-color: #00509E; /* Highlighted navy blue */
 }
 
 .timer-modes button:hover {
@@ -87,15 +87,19 @@ circle {
     border-radius: 20px;
     border: none;
     background-color: white;
-    color: #FF6F61;
+    color: #001f3f; /* Navy blue text */
     font-weight: bold;
 }
 
 .controls button:hover {
-    background-color: #FFAB40;
+    background-color: #00509E;
 }
 
-/* Footer */
-footer {
-    margin-top: 20px;
+/* Task List */
+.task-list {
+    margin-top: 30px;
+}
+
+.task-list h2 {
+   color:#ffffff
 }
