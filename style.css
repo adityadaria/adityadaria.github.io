@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e5eaf5; /* Freeze Purple */
+    background-color: #d0bdf4; /* Medium Purple */
     color: #8458B3; /* Purple Pain */
     margin: 0;
     display: flex;
@@ -20,7 +20,6 @@ body {
 header h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #8458B3; /* Purple Pain */
 }
 
 /* Timer Modes */
@@ -31,19 +30,20 @@ header h1 {
 }
 
 .timer-modes button {
-    background-color: #d0bdf4; /* Medium Purple */
-    color: #8458B3; /* Purple Pain */
+    background-color: #8458B3; /* Purple Pain */
+    color: white;
     border-radius: 5px;
     border: none;
     padding: 10px 20px;
 }
 
 .timer-modes button.active-mode {
-    background-color: #a28089; /* Heavy Purple */
+    background-color: white; /* Highlight active mode */
+    color: #8458B3; /* Purple Pain text for active mode */
 }
 
 .timer-modes button:hover {
-    background-color: #a0d2eb; /* Ice Cold */
+    background-color: #bfa2e6; /* Slightly lighter Medium Purple */
 }
 
 /* Timer Display */
@@ -63,15 +63,15 @@ header h1 {
 }
 
 .controls button {
-    background-color: #a0d2eb; /* Ice Cold */
-    color: #8458B3; /* Purple Pain */
-    border-radius: 5px;
-    border: none;
-    padding: 10px 20px;
+    background-color: white; /* White buttons */
+    color: #8458B3; /* Purple Pain text */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    padding: 10px 20px; /* Consistent padding */
 }
 
 .controls button:hover {
-    background-color: #d0bdf4; /* Medium Purple */
+    background-color: #bfa2e6; /* Slightly lighter Medium Purple hover effect */
 }
 
 /* Task Section */
@@ -84,10 +84,20 @@ header h1 {
 }
 
 #tasks li {
-    background-color: #d0bdf4; /* Medium Purple for tasks */
+    background-color: #8458B3; /* Purple Pain for tasks */
+    color: white; /* White text for tasks */
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
-.add-task input,
-.add-task button {
+/* Add Task Input and Button */
+.add-task input {
     padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.add-task button {
+    background-color: #8458B3; /* Purple Pain button */
+    color: white; /* White text for button */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
 }
