@@ -1,4 +1,4 @@
-// Timer Variables 
+// Timer Variables
 let timerInterval = null; 
 let timeLeft = 25 * 60; // Default to Pomodoro (25 minutes)
 let isRunning = false;
