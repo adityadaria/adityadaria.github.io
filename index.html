@@ -7,21 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Pomodoro Timer</h1>
-    
-    <div class="settings">
-        <div class="time-input">
-            <label>
-                Work (mins): 
-                <input type="number" id="workTime" value="25" min="1">
-            </label>
-            <label>
-                Break (mins): 
-                <input type="number" id="breakTime" value="5" min="1">
-            </label>
-        </div>
+    <header>
+        <h1>Pomodoro Timer</h1>
+    </header>
+
+    <!-- Timer Modes -->
+    <div class="timer-modes">
+        <button id="pomodoro-btn" class="active-mode">Pomodoro</button>
+        <button id="short-break-btn">Short Break</button>
+        <button id="long-break-btn">Long Break</button>
     </div>
 
+    <!-- Progress Circle -->
     <div class="progress-container">
         <svg class="progress-circle">
             <circle class="background"></circle>
@@ -30,13 +27,19 @@
         <div id="timer">25:00</div>
     </div>
 
+    <!-- Controls -->
     <div class="controls">
         <button onclick="startTimer()">Start</button>
         <button onclick="pauseTimer()">Pause</button>
         <button onclick="resetTimer()">Reset</button>
     </div>
 
-    <div id="sessions">Completed Sessions: 0</div>
+    <!-- Completed Sessions -->
+    <footer>
+        <div id="sessions">Completed Sessions: 0</div>
+    </footer>
+
+    <!-- Alarm Sound -->
     <audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 
     <script src="script.js"></script>
