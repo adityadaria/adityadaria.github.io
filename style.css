@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #001f3f; /* Navy blue */
+    background-color: #2ecc71; /* Green background */
     color: white;
     margin: 0;
     display: flex;
@@ -30,7 +30,7 @@ header h1 {
 }
 
 .timer-modes button {
-    background-color: #003366; /* Dark navy blue */
+    background-color: #27ae60; /* Dark green */
     color: white;
     border-radius: 5px;
     border: none;
@@ -38,11 +38,11 @@ header h1 {
 }
 
 .timer-modes button.active-mode {
-    background-color: #00509E; /* Highlighted navy blue */
+    background-color: #1e8449; /* Highlighted green */
 }
 
 .timer-modes button:hover {
-    background-color: #004080; /* Slightly lighter hover effect */
+    background-color: #239b56; /* Slightly lighter hover effect */
 }
 
 /* Timer Display */
@@ -62,11 +62,13 @@ header h1 {
 }
 
 .controls button {
-    background-color: white;
-    color: #001f3f; /* Navy blue text */
-    border-radius: 5px;
-    border: none;
-    padding: 10px 15px;
+    background-color: white; /* White background for buttons */
+    color: #27ae60; /* Green text */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    padding: 10px 20px; /* Consistent padding */
+    font-size: 16px; /* Ensure consistent font size */
+    font-weight: bold; /* Bold text for all buttons */
 }
 
 .controls button:hover {
@@ -83,7 +85,7 @@ header h1 {
 }
 
 #tasks li {
-    background-color: #003366; /* Dark navy blue for tasks */
+    background-color: #27ae60; /* Dark green for tasks */
 }
 
 .add-task input,
