@@ -21,7 +21,7 @@ function setMode(mode, minutes) {
    updateActiveMode(mode);
    isRunning = false;
 
-   document.getElementById("start-btn").textContent = "START"; // Reset button text
+   document.getElementById("start-btn").textContent = "Start"; // Reset button text
 }
 
 // Update Active Mode Button Styling
@@ -39,7 +39,7 @@ function startTimer() {
    if (!isRunning) {
        isRunning = true;
 
-       document.getElementById("start-btn").textContent = "PAUSE";
+       document.getElementById("start-btn").textContent = "Pause";
 
        timerInterval = setInterval(() => {
            if (timeLeft > 0) {
@@ -64,7 +64,17 @@ function pauseTimer() {
    clearInterval(timerInterval);
    isRunning = false;
 
-   document.getElementById("start-btn").textContent = "START";
+   document.getElementById("start-btn").textContent = "Start";
+}
+
+// Reset Timer
+function resetTimer() {
+   clearInterval(timerInterval);
+   isRunning = false;
+
+   if (pomodoroBtn.classList.contains("active-mode")) setMode("Pomodoro", 25);
+   else if (shortBreakBtn.classList.contains("active-mode")) setMode("Short Break", 5);
+   else if (longBreakBtn.classList.contains("active-mode")) setMode("Long Break", 15);
 }
 
 // Update Display
