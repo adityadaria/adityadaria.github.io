@@ -1,94 +1,52 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #2ecc71; /* Green background */
-    color: white;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>FocusFlow Timer</h1>
+        </header>
 
-.container {
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
-}
+        <!-- Timer Modes -->
+        <div class="timer-modes">
+            <button id="pomodoro-btn" class="active-mode">Pomodoro</button>
+            <button id="short-break-btn">Short Break</button>
+            <button id="long-break-btn">Long Break</button>
+        </div>
 
-/* Header */
-header h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
+        <!-- Timer Display -->
+        <div class="timer-display">
+            <h1 id="timer">25:00</h1>
+        </div>
 
-/* Timer Modes */
-.timer-modes {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
+        <!-- Controls -->
+        <div class="controls">
+            <button id="start-btn" onclick="startTimer()">Start</button>
+            <button id="pause-btn" onclick="pauseTimer()">Pause</button>
+            <button id="reset-btn" onclick="resetTimer()">Reset</button>
+        </div>
 
-.timer-modes button {
-    background-color: #27ae60; /* Dark green */
-    color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 10px 20px;
-}
+        <!-- Task List -->
+        <section class="task-section">
+            <h2>Tasks</h2>
+            <ul id="tasks"></ul>
+            <div class="add-task">
+                <input type="text" id="task-input" placeholder="+ Add Task">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+        </section>
 
-.timer-modes button.active-mode {
-    background-color: #1e8449; /* Highlighted green */
-}
+        <!-- Alarm Sound -->
+        <audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 
-.timer-modes button:hover {
-    background-color: #239b56; /* Slightly lighter hover effect */
-}
+    </div>
 
-/* Timer Display */
-.timer-display {
-    margin-top: 20px;
-}
-
-#timer {
-    font-size: 64px;
-}
-
-/* Controls */
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.controls button {
-    background-color: white; /* White background for buttons */
-    color: #27ae60; /* Green text */
-    border-radius: 5px; /* Rounded corners */
-    border: none; /* No border */
-    padding: 10px 20px; /* Consistent padding */
-    font-size: 16px; /* Ensure consistent font size */
-    font-weight: bold; /* Bold text for all buttons */
-}
-
-.controls button:hover {
-    background-color: #f7f7f7; /* Slightly lighter hover effect */
-}
-
-/* Task Section */
-.task-section h2 {
-    font-size: 24px;
-}
-
-#tasks {
-    list-style-type: none;
-}
-
-#tasks li {
-    background-color: #27ae60; /* Dark green for tasks */
-}
-
-.add-task input,
-.add-task button {
-    padding: 10px;
-}
+    <script src="script.js"></script>
+</body>
+</html>
