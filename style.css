@@ -53,6 +53,7 @@ header h1 {
 
 #timer {
     font-size: 64px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Controls */
@@ -91,6 +92,11 @@ header h1 {
 }
 
 /* Add Task Input and Button */
+.add-task {
+    display: flex;
+    justify-content: center;
+}
+
 .add-task input {
     padding: 10px;
     border-radius: 5px 0 0 5px;
@@ -99,5 +105,4 @@ header h1 {
 .add-task button {
     background-color: #8458B3; /* Purple Pain button */
     color: white; /* White text for button */
-    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
 }
